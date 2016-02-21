@@ -1,0 +1,28 @@
+{
+  "name": "minifyify-node-source-map-support-bug",
+  "version": "1.0.0",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/dumbmatter/minifyify-node-source-map-support-bug/issues"
+  },
+  "author": "Jeremy Scheff <jdscheff@gmail.com>",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dumbmatter/basketball-gm.git"
+  },
+  "scripts": {
+    "build": "npm run build-with-minifyify && npm run build-without-minifyify",
+    "build-with-minifyify": "browserify -p [minifyify --no-map] app.js -o dist/app-with-minifyify.js",
+    "build-without-minifyify": "browserify app.js -o dist/app-without-minifyify.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "source-map-support": "^0.4.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "minifyify": "^7.3.1"
+  },
+  "private": true
+}
